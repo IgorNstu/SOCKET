@@ -6,7 +6,7 @@ int main(void)
     case 0:
         r=create_tcp_local();
         if (r==1){
-            printf("Ошибка в работе сервера\n");
+            printf("Ошибка в работе сервера \n");
         }
         break;
     case 1:

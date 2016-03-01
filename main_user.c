@@ -1,5 +1,6 @@
 #include "ad.h"
 
+
 int main(void)
 {   int r;
     switch (TYPE_OF_SOCKET) {

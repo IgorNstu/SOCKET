@@ -1,3 +1,2 @@
 all:
-
 	gcc main_server.c ad.h prot_server.c -o server

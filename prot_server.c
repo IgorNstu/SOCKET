@@ -122,7 +122,7 @@ int create_udp_inet(void){
     server_address.sin_addr.s_addr=  htonl(INADDR_LOOPBACK);
     r=setsockopt(id_soc,SOL_SOCKET,SO_REUSEADDR,&optval,optlen);
     if (r==-1){
-        perror("Установка параметра сокета");
+        perror("Установка параметра сокета ");
         close(id_soc);
         return 1;
     }
@@ -137,7 +137,7 @@ int create_udp_inet(void){
     int msg_len=sizeof(msg);
 
     /*Ожидаем сообщения. В закоментированной строчке вариант, при котором сервер не корректно сохраняет
-     адресс отправителя, и отправляет сообщение через закоментированное sendto не ему*/
+     адрес отправителя, и отправляет сообщение через закоментированное sendto не ему*/
     recvfrom(id_soc,msg,msg_len,0,0,0);
     //recvfrom(id_soc,msg,msg_len,0,(struct sockaddr*)&server_address,(socklen_t*)server_len);
 
