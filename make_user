@@ -1,0 +1,3 @@
+all:
+
+	gcc main_user.c ad.h prot_user.c -o user
